@@ -1,0 +1,20 @@
+{
+  "Gaystavo": {
+    "scope": "typescript,javascript,html,css,json,plaintext,markdown",
+    "prefix": ["gustavo", "Gustavo", "GUSTAVO"],
+    "body": ["gaystavo"],
+    "description": "Substitui 'gustavo' por 'gaystavo'"
+  },
+  "Gaylherme": {
+    "scope": "typescript,javascript,html,css,json,plaintext,markdown",
+    "prefix": ["guilherme", "Guilherme", "GUILHERME"],
+    "body": ["gaylherme"],
+    "description": "Substitui 'guilherme' por 'gaylherme'"
+  },
+  "Gaynando": {
+    "scope": "typescript,javascript,html,css,json,plaintext,markdown",
+    "prefix": ["fernando", "Fernando", "FERNANDO"],
+    "body": ["gaynando"],
+    "description": "Substitui 'fernando' por 'gaynando'"
+  }
+}
