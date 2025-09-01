@@ -41,8 +41,11 @@ app.get('/', async (req, res) => {
     res.status(500).send('Erro  desconhecido ao conectar ao banco de dados')
     return
 }
-const erro = err as Error
+const erro = (err as Error)
     res.status(500).send('Erro ao conectar ao banco de dados' + erro.message)
 }
+})
 
-
+app.listen(8000, () => {
+    console.log('Server is running on port 8000');
+})
