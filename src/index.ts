@@ -48,35 +48,5 @@ const erro = (err as Error)
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
-})
+});
 
-// Tarefa: Criar uma rota get para produtos que retorne a lista de produtos do banco de dados
-// produto deve ter id, nome, preco, urlfoto, descricao
-// Deve-se criar uma tabela no banco de dados AIVEN para armazenar os produtos
-// A resposta deve ser um array de produtos em formato JSON
-// Crie o código sql para criar a tabela de produtos
- 
-//CREATE TABLE produtos (
-//    id INT AUTO_INCREMENT PRIMARY KEY,
-//    nome VARCHAR(100) NOT NULL,
-//    preco DECIMAL(10, 2) NOT NULL,
-//    urlfoto VARCHAR(255) NOT NULL,
-//    descricao TEXT
-//);
-//Faz pelo menos 3 inserções nessa tabela 
-
-//use"defaultdb";
-//CREATE TABLE produtos (
-//    id INT AUTO_INCREMENT PRIMARY KEY,
-//    nome VARCHAR(100) NOT NULL,
-//    preco DECIMAL(10, 2) NOT NULL,
-//    urlfoto VARCHAR(255) NOT NULL,
-//    descricao TEXT
-//);
- 
-// INSERT INTO produtos (id,nome,preco,urlfoto,descricao)
-//VALUES ("arroz", '23','https://placehold.co/600x400', 'alimento do dia a dia'),
-// ("camera", '18.90','https://placehold.co/600x400', 'utensilio para fotografar '),
-//("cadeira", '120','https://placehold.co/600x400', 'utensilio para sentar para relaxar'),
-//("processador ryzen 7 770gt", '1.900','https://placehold.co/600x400', 'processador para colocar em computador'),
-//("garfo", '70','https://placehold.co/600x400', 'usado para pegar alimentos com facilidade');
