@@ -1,21 +1,22 @@
-import express, { Request, Response } from 'express'
-import 'dotenv/config'
-import { MongoClient } from 'mongodb'
+import 'dotenv/config';
+import express, { Request, Response } from 'express';
+import { MongoClient } from 'mongodb';
 
-const client = new MongoClient(process.env.MONGO_URI!)
-await client.connect()
-const db = client.db(process.env.MONGO_DB!)
+const client = new MongoClient(process.env.MONGO_URI!);
+const db = client.db(process.env.MONGO_DB!);
 
-const app = express()
-//middleware para receber json
-app.use(express.json()) 
-//criandoo uma rota para acesso pelo navegador
-app.get('/', async (req: Request, res: Response) => {
-    const produtos = await db.collection('produtos').find().toArray()
-    res.send(produtos)
-})
-//criando o servidor na porta 8000 com o express
-app.listen(8000, () => {
-    console.log('Server is running on port 8000');
+await client.connect();
+
+const app = express();
+app.use(express.json());
+
+app.get('/produtos', async (req: Request, res: Response) => {
+
+    const produtos = await db.collection('produtos').find().toArray();
+    res.send(produtos);
+
 });
 
+app.listen(8000, () => {
+    console.log('Server Iniciado, porta: 8000')
+});
