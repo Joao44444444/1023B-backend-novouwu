@@ -25,7 +25,14 @@ app.post('/produtos', async (req: Request, res: Response) => {
     }
     const produto = {nome, preco,urlfoto, descricao,}
     const resultado = await db.collection('produtos').insertOne(produto)
-    res.status(201).json({"nome,preco,urlfoto,descricao,_id:resultado.insertedId"});
+    res.status(201).json({
+        nome,
+        preco,
+        urlfoto,
+        descricao,
+        _id: resultado.insertedId
+    });
+
        
     });
 app.listen(8000, () => {
